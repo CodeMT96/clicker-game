@@ -6,6 +6,15 @@ body {
     justify-content: center;
 }
 
-canvas {
+.base {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 950px;
+}
+
+#gameelement {
+    width: 300px;
     border: 2px solid green;
+    transition: 0,8s;
 }

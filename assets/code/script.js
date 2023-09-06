@@ -1,19 +1,19 @@
-const canvas = document.getElementById("game");
-const clickableImg = new Image();
-clickableImg.src = "/img/donut.png";
-if (canvas.getContext) {
-    const ctx = canvas.getContext("2d");
-    ctx.drawImage(clickableImg, 0, 0, 1000, 1000);
+const clickableIMG = document.getElementById("gameelement");
 
-
-
-} else {
-    "Upps"
+function gameElementFlare() {
+  console.log("hover");
+  clickableIMG.style.transform = "scale(2,2)";
 }
 
+function gameElementLeftImg() {
+  console.log("left");
+  clickableIMG.style.transform = "scale(1)";
+}
 
-
-canvas.width = 920;
-canvas.height = 1080;
-
-window.addEventListener("load", draw);
+function clickableGameElement() {
+  console.log("hi");
+  clickableIMG.style.transform = "scale(3,3)";
+}
+clickableIMG.addEventListener("mouseleave", gameElementLeftImg);
+clickableIMG.addEventListener("mouseover", gameElementFlare);
+clickableIMG.addEventListener("click", clickableGameElement);
